@@ -16,79 +16,96 @@
 .use-loc{background:none;border:0;display:flex;align-items:center;gap:6px;color:#fff;font:400 14px/20px var(--sans);text-decoration:underline;cursor:pointer;transition:color .2s}
 .use-loc:hover{color:var(--brass)}
 
-.promo2{background:#24221f;border:1px solid rgba(198,170,118,.55);display:flex;align-items:center;gap:55px;overflow:hidden;min-height:240px}
-.promo2 .ph{width:324px;height:240px;flex:none;overflow:hidden}
-.promo2 .ph img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
-.promo2:hover .ph img{transform:scale(1.06)}
-.promo2 .cp{width:397px;flex:none}
-.promo2 .eb{font:600 14px/1.7 var(--sans);letter-spacing:2.8px;text-transform:uppercase;color:var(--brass)}
-.promo2 h2{font:700 35px/1.15 var(--cond);text-transform:uppercase;color:#fff;margin-top:10px}
-.promo2 h2 em{display:block;font:italic 400 35px/1.15 var(--serif);text-transform:none;letter-spacing:-.35px}
-.promo2 .dv{width:1px;height:140px;background:rgba(198,170,118,.45);flex:none}
-.promo2 .rt{display:flex;flex-direction:column;gap:15px;align-items:flex-start;padding-right:40px}
-.promo2 .rt p{font-size:14px;line-height:24px;color:var(--stone);max-width:430px}
+.hero-btns{display:flex;gap:16px;align-items:flex-start}
+.hero-btns .btn-primary{width:189px}
+.btn-ghost{height:50px;width:161px;border:1px solid rgba(255,255,255,.5);color:#fff;font:600 16px/1 var(--cond);letter-spacing:.96px;text-transform:uppercase}
+.btn-ghost:hover{background:#fff;color:var(--char);border-color:#fff}
 
-.plan{background:var(--paper);padding:80px 40px;display:flex;gap:20px;align-items:center;position:relative;overflow:hidden}
-.plan-intro{flex:none;width:610px;height:610px;background:var(--char);color:#fff;display:flex;align-items:center;justify-content:center}
-.plan-intro h2{font:400 55px/70px var(--serif);margin-bottom:20px}
-.plan-intro h2 em{font-style:italic;color:var(--brass)}
-.plan-intro p{font-size:18px;line-height:30px;width:373px}
-.plan-car{flex:1;min-width:0;position:relative}
-.plan-track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth}
+.why{background:var(--paper);color:var(--char);padding:71px 40px 42px;text-align:center;position:relative}
+.why .intro{max-width:726px;margin:0 auto;display:flex;flex-direction:column;gap:16px;align-items:center}
+.why h2{font:700 35px/1.15 var(--cond);text-transform:uppercase;letter-spacing:-.35px}
+.why h2 em{font:italic 400 35px/1.15 var(--serif);text-transform:none}
+.why .intro p{font-size:16px;line-height:25px}
+.reasons{display:flex;justify-content:center;gap:47px;margin:56px auto 0;max-width:1267px}
+.reason{flex:none;width:260px;display:flex;flex-direction:column;gap:14px}
+.reason+.reason{position:relative}
+.reason+.reason::before{content:"";position:absolute;left:-24px;top:0;width:1px;height:140px;background:var(--brass)}
+.reason h3{font:600 20px/normal var(--cond);text-transform:uppercase}
+.reason p{font-size:16px;line-height:1.5;margin:0 auto}
+.why::after{content:"";position:absolute;left:40px;right:40px;bottom:0;height:1px;background:rgba(28,27,25,.2)}
+
+.plan{background:var(--paper);padding:46px 0 60px;position:relative;overflow:hidden}
+.plan-head{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;padding:0 40px}
+.plan-head h2{font:400 45px/1.15 var(--serif);letter-spacing:-.45px;max-width:551px}
+.plan-head h2 em{font-style:italic}
+.plan-head p{font-size:16px;line-height:25px;width:484px;margin-top:15px}
+.plan-car{position:relative;margin-top:90px}
+.plan-track{display:flex;gap:20px;padding:0 40px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth}
 .plan-track::-webkit-scrollbar{display:none}
 .pcard{flex:none;width:610px;height:610px;position:relative;scroll-snap-align:start;overflow:hidden;cursor:pointer;text-align:left;color:#fff;background:var(--char)}
-.pcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.pcard>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .pcard::before,.pcard::after{content:"";position:absolute;inset:0;transition:opacity .35s ease}
 .pcard::after{background:linear-gradient(to bottom,rgba(33,31,32,0) 45%,rgba(33,31,32,.8))}
 .pcard::before{background:rgba(33,31,32,.8);opacity:0;z-index:1}
 .pcard:hover::before,.pcard:focus-visible::before{opacity:1}
 .pcard:hover::after,.pcard:focus-visible::after{opacity:0}
-.pc{position:absolute;left:50px;bottom:50px;width:398px;z-index:2}
-.pc span{display:block;font:italic 400 35px/34px var(--serif);color:#fff;transition:color .35s}
-.pc p{font-size:16px;line-height:22px;color:#fff;max-height:0;margin-top:0;opacity:0;overflow:hidden;transition:max-height .35s ease,margin-top .35s ease,opacity .35s ease}
-.pcard:hover .pc span,.pcard:focus-visible .pc span{color:var(--brass)}
-.pcard:hover .pc p,.pcard:focus-visible .pc p{max-height:44px;margin-top:14px;opacity:1}
+.pc-idle{position:absolute;left:50px;bottom:50px;width:398px;z-index:2;font:italic 400 35px/34px var(--serif);color:#fff;transition:opacity .35s}
+.pc-hov{position:absolute;left:50px;top:389px;width:441px;z-index:2;display:flex;flex-direction:column;gap:12px;opacity:0;transform:translateY(8px);transition:opacity .35s ease,transform .35s ease}
+.pc-hov .eb{font:600 16px/normal var(--cond);letter-spacing:.64px;text-transform:uppercase;color:var(--brass)}
+.pc-hov h3{font:400 35px/40px var(--serif);color:#fff;width:426px}
+.pc-hov h3 em{font-style:italic}
+.pc-hov p{font-size:16px;line-height:24px;color:#fff}
+.pcard:hover .pc-idle,.pcard:focus-visible .pc-idle{opacity:0}
+.pcard:hover .pc-hov,.pcard:focus-visible .pc-hov{opacity:1;transform:none}
+/* promo tile (first card) */
+.pcard.promo-tile::before{opacity:1}
+.pcard.promo-tile::after{display:none}
+.pcard.promo-tile:hover::before{opacity:1}
+.promo-in{position:absolute;left:0;right:0;top:202px;z-index:2;display:flex;flex-direction:column;align-items:center;text-align:center}
+.promo-in img{width:56px;height:56px;object-fit:contain;padding:1px 2px 5px}
+.promo-in b{display:block;margin-top:14px;font:700 50px/1 var(--cond);text-transform:uppercase;letter-spacing:-.5px}
+.promo-in em{display:block;font:italic 400 50px/1 var(--serif);letter-spacing:-.5px}
 .plan-car:hover .arrow,.plan-car .arrow:focus-visible{opacity:1}
 .plan-car .arrow{z-index:3;border-radius:0}
-.plan-dots{position:absolute;left:0;right:0;bottom:36px;display:flex;justify-content:center}
+.plan-dots{display:flex;justify-content:center;margin-top:28px}
 .plan .dot.on{background:var(--brass)}
+.plan-cta{display:flex;align-items:center;justify-content:center;gap:40px;margin-top:40px;padding:0 40px}
+.plan-cta p{font:600 20px/30px var(--cond);text-transform:uppercase;width:234px}
+.btn-line{height:50px;width:176px;border:1px solid var(--char);color:var(--char);font:600 16px/1 var(--cond);letter-spacing:.96px;text-transform:uppercase}
+.btn-line:hover{background:var(--char);color:#fff}
 
-.why{background:var(--char);color:#fff;padding:96px 80px;display:flex;gap:64px;align-items:center}
-.why .intro{width:340px;flex:none}
-.why h2{font:400 44px/1.15 var(--serif)}
-.why h2 em{font-style:italic}
-.why .intro p{font-size:18px;line-height:30px;margin-top:20px}
-.reasons{flex:1;display:flex;gap:32px;min-width:0}
-.reason{flex:1;min-width:0;border-top:2px solid var(--brass);padding-top:24px}
-.reason h3{font:600 20px/26px var(--cond);text-transform:uppercase;margin-bottom:14px}
-.reason p{font-size:16px;line-height:24px;color:var(--stone)}
-
-.nat{background:var(--char);color:#fff;display:flex;gap:102px;align-items:center;min-height:380px;padding-right:40px}
-.nat .im{width:577px;height:380px;flex:none;overflow:hidden}
+.nat-sec{background:var(--paper);padding:0 40px 80px}
+.nat{background:var(--char);border:1px solid rgba(198,170,118,.55);color:#fff;display:flex;align-items:center;height:240px;overflow:hidden}
+.nat .im{width:324px;height:240px;flex:none;overflow:hidden}
 .nat .im img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
-.nat:hover .im img{transform:scale(1.04)}
-.nat h2{font:700 35px/1.15 var(--cond);text-transform:uppercase;letter-spacing:-.35px}
-.nat h2 em{display:block;font:italic 400 35px/1.15 var(--serif);text-transform:none}
-.nat p{font-size:18px;line-height:30px;color:var(--stone);max-width:721px;margin:20px 0}
+.nat:hover .im img{transform:scale(1.05)}
+.nat .cp{width:380px;flex:none;padding-left:0}
+.nat .eb{font:600 16px/normal var(--cond);letter-spacing:.96px;text-transform:uppercase;color:var(--brass);padding-left:61px}
+.nat h2{font:400 35px/1.15 var(--serif);letter-spacing:-.35px;width:214px;margin:14px 0 0 61px}
+.nat h2 em{font-style:italic}
+.nat .dv{width:1px;height:140px;background:rgba(198,170,118,.45);flex:none;margin-left:-1px}
+.nat .rt{padding-left:36px;max-width:640px;display:flex;flex-direction:column;gap:22px}
+.nat .rt p{font-size:16px;line-height:1.3;color:rgba(248,249,244,.9)}
 .nat .row{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
 .mail{display:inline-flex;gap:6px;align-items:center;font-size:18px;line-height:30px;color:var(--stone);transition:color .2s}
 .mail:hover{color:var(--brass);text-decoration:underline}
 
-.evt{background:var(--paper);padding:80px 40px;display:flex;justify-content:space-between;align-items:center;gap:40px}
+.evt{background:var(--paper);padding:110px 40px 80px;display:flex;justify-content:space-between;align-items:flex-start;gap:40px}
 .evt .l{width:537px;display:flex;flex-direction:column;gap:24px;align-items:flex-start}
-.evt .eb{font:600 16px/1.7 var(--sans);letter-spacing:3.2px;text-transform:uppercase}
-.evt h2{font:400 55px/70px var(--serif)}
+.evt .eb{font:600 16px/normal var(--cond);letter-spacing:.64px;text-transform:uppercase;color:var(--heat)}
+.evt h2{font:400 45px/50px var(--serif)}
 .evt h2 em{font-style:italic}
 .steps{display:flex;flex-direction:column;gap:36px}
 .step{display:flex;gap:20px;align-items:center}
-.step b{font:400 32px/44px var(--serif);color:var(--brass);min-width:39px}
+.step b{font:italic 400 25px/normal var(--serif);letter-spacing:.5px;text-transform:uppercase;color:var(--heat);min-width:39px}
 .step h3{font:500 18px/24px var(--sans)}
 .step p{font-size:14px;line-height:20px;opacity:.7;margin-top:4px}
-.evt .btn{width:304px}
-.btn-outline{border:1px solid var(--char);color:var(--char)}
-.btn-outline:hover{background:var(--char);color:#fff}
-.evt .small{font-size:16px;line-height:30px;white-space:nowrap}
-.evt .small a{text-decoration:underline;transition:color .2s}
+.evt .btns{display:flex;gap:16px}
+.evt .btns .btn-alt{width:189px;height:50px;font:600 16px/1 var(--cond);letter-spacing:.96px}
+.evt .btns .btn-ghost{width:161px;border-color:var(--char);color:var(--char)}
+.evt .btns .btn-ghost:hover{background:var(--char);color:#fff}
+.evt .small{font-size:16px;line-height:30px}
+.evt .small a{text-decoration:underline;font-weight:600;transition:color .2s}
 .evt .small a:hover{color:var(--heat)}
 .evt .r{width:670px;height:700px;border-radius:0;overflow:hidden;flex:none}
 .evt .r img{width:100%;height:100%;object-fit:cover;transition:transform .8s}
@@ -111,25 +128,31 @@
 .lempty{padding:18px 16px;font-size:15px;border:1px solid var(--stone);border-top:0}
 
 @media (max-width:1200px){
-  .evt .small{white-space:normal}
-  .plan-intro,.pcard{width:480px;height:480px}
-  .why{flex-wrap:wrap;padding:80px 40px}.why .intro{width:100%}
-  .evt{flex-direction:column;align-items:flex-start}.evt .r{width:100%;height:480px}
-  .nat{gap:48px}.nat .im{width:42%}
-  .promo2{flex-wrap:wrap;gap:0}.promo2 .dv{display:none}.promo2 .ph{width:100%}.promo2 .cp{padding:28px 32px 0;width:100%}.promo2 .rt{padding:20px 32px 32px}
+  .pcard{width:480px;height:480px}
+  .pc-hov{top:300px}
+  .promo-in{top:140px}.promo-in b,.promo-in em{font-size:40px}
+  .plan-head{flex-direction:column;gap:16px}.plan-head p{width:auto;max-width:560px}
+  .plan-car{margin-top:40px}
+  .why{padding:64px 40px 48px}
+  .reasons{flex-wrap:wrap;gap:40px 47px}.reason+.reason::before{display:none}
+  .evt{flex-direction:column;align-items:flex-start;padding-top:64px}.evt .r{width:100%;height:480px}
+  .nat{flex-wrap:wrap;height:auto}.nat .dv{display:none}.nat .im{width:100%}.nat .cp{padding:28px 0 0;width:100%}.nat .rt{padding:20px 32px 32px}
 }
 @media (max-width:1000px){
   .hero-img{position:relative;width:100%;max-width:none;height:340px;margin-top:0}
   .hero{height:auto}.hero-copy{position:relative;top:auto;padding:150px 0 40px}
-  .plan{flex-direction:column;padding:48px 20px}.plan-intro{width:100%;height:auto;padding:48px 24px}.plan-intro p{width:auto}
-  .plan-car{width:100%}.pcard{width:86%;height:420px}.plan-dots{position:static;margin-top:20px}
-  .reasons{flex-direction:column;width:100%}
-  .nat{flex-direction:column;padding:0 20px 40px;gap:28px;align-items:flex-start}.nat .im{width:calc(100% + 40px);margin:0 -20px}
-  .evt .l{width:100%}.evt .btn{width:100%}
+  .plan{padding:48px 0}.plan-head{padding:0 20px}.plan-track{padding:0 20px}
+  .pcard{width:86%;height:420px}.pc-hov{top:250px;width:auto;right:30px;left:30px}.pc-hov h3{width:auto}
+  .promo-in{top:100px}
+  .reasons{flex-direction:column;align-items:center;width:100%}
+  .nat-sec{padding:0 20px 56px}
+  .evt .l{width:100%}.evt .btns{width:100%}.evt .btns .btn-alt,.evt .btns .btn-ghost{flex:1;width:auto}
+  .plan-cta{flex-direction:column;gap:16px;text-align:center}.plan-cta p{width:auto}
 }
 @media (max-width:700px){
-  .hero h1.reg{font-size:38px}.plan-intro h2,.evt h2{font-size:38px;line-height:48px}
+  .hero h1.reg{font-size:38px}.plan-head h2,.evt h2{font-size:34px;line-height:42px}
   .why{padding:56px 20px}.evt{padding:56px 20px}
+  .testi{padding:56px 24px}.slide blockquote{font-size:28px;line-height:38px}
 }
 </style>
 </head>
@@ -176,53 +199,42 @@
 <section class="hero">
   <div class="hero-img" role="img" aria-label="Friends sharing a seafood tower at a long table"></div>
   <div class="hero-copy"><div class="wrap"><div class="in">
-    <h1 class="reg">Bring the team.<br><em>We’ll bring the fire.</em></h1>
-    <p class="lead">Gauchos carving at your table, a seasonal Market Table with something for everyone, and a coaster that puts you in charge. Everyone’s welcome, and we can’t wait to show you around. Read on to see how to Fogo.</p>
-    <button class="btn btn-primary" data-modal="locations">find a location</button>
-    <button class="use-loc" id="useLoc"><img src="assets/pin-small.svg" alt="" width="14" height="14">Use my current location</button>
+    <h1 class="reg">Bring your guests.<br><em>We’ll bring the fire.</em></h1>
+    <p class="lead">Gauchos carving at your table, a seasonal Market Table with something for everyone, and a coaster that puts you in charge. Everyone’s welcome for large group dining and private event planning for any occasion.</p>
+    <div class="hero-btns"><button class="btn btn-primary" data-modal="locations">find a location</button>
+    <a class="btn btn-ghost" href="mailto:groupevents@fogo.com">contact us</a></div>
   </div></div></div>
 </section>
 
-<!-- ============ PROMO ============ -->
-<section class="promo-sec"><div class="wrap">
-  <div class="promo2">
-    <div class="ph"><img src="assets/promo.jpg" alt="Guests celebrating at a holiday party" loading="lazy"></div>
-    <div class="cp"><div class="eb">Reserve early. Enjoy extra perks.</div><h2>YOUR HOLIDAY PARTY<em>just got more rewarding.</em></h2></div>
-    <div class="dv"></div>
-    <div class="rt">
-      <p>Our National Accounts Program is designed for meeting planners and tour and travel partners, with incentive pricing and event packages in major markets across the country.</p>
-      <button class="btn btn-secondary" data-modal="perks">SEE THE PERKS</button>
-    </div>
+<!-- ============ WHY FOGO ============ -->
+<section class="why">
+  <div class="intro"><h2>why fogo&nbsp; <em>for groups</em></h2><p>You've got a vision for your event, and we're here to fulfill it. All handled by a single point of contact.</p></div>
+  <div class="reasons">
+    <div class="reason"><h3>No room rental.</h3><p>Private rooms with no rental fee and in-house A/V, from HDTVs and projectors to mics and dedicated internet.</p></div>
+    <div class="reason"><h3>Flexible by design</h3><p>Private and semi-private event spaces, configured to fit your group, up to a full restaurant buyout.</p></div>
+    <div class="reason"><h3>Packages, your way</h3><p>Customized private dining packages with many options for one price, built to fit your budget.</p></div>
+    <div class="reason"><h3>Inclusive menus</h3><p>Vegan, vegetarian, pescatarian and gluten-free options, plus the full seasonal Market Table for everyone.</p></div>
   </div>
-</div></section>
+</section>
 
 <!-- ============ WHAT ARE YOU PLANNING ============ -->
 <section class="plan" id="planning" aria-label="Event types">
-  <div class="plan-intro"><div>
-    <h2>What are you<br><em>planning?</em></h2>
-    <p>Fundraisers, graduations, sales retreats, lunch &amp; learns and more. If you're gathering 15 or more, we'll make it work.</p>
-  </div></div>
+  <div class="plan-head">
+    <h2>Whatever you're planning, <em>we've got you</em>.</h2>
+    <p>Fundraisers, wedding rehearsal dinner venues, private parties, business meetings, and more. If you’re gathering 15 or more guests, we’ll handle every detail.</p>
+  </div>
   <div class="plan-car" aria-roledescription="carousel">
     <div class="plan-track" id="planTrack">
-      <button class="pcard" data-event="Corporate"><img src="assets/corporate.jpg" alt="" loading="lazy" style="object-position:67% 50%"><div class="pc"><span>Corporate</span><p>Meetings, medical and sales meetings, client dinners, team offsites and lunch &amp; learns.</p></div></button>
-      <button class="pcard" data-event="Celebrations"><img src="assets/celebrations.jpg" alt="" loading="lazy" style="object-position:51% 50%"><div class="pc"><span>Celebrations</span><p>Birthdays, anniversaries, graduations and bachelor(ette) parties.</p></div></button>
-      <button class="pcard" data-event="Weddings"><img src="assets/weddings.jpg" alt="" loading="lazy" style="object-position:50% 50%"><div class="pc"><span>Weddings</span><p>Wedding luncheons, receptions and milestone events.</p></div></button>
+      <button class="pcard promo-tile" data-event="Holiday party" aria-label="Your holiday party just got more rewarding"><img src="assets/promo.jpg" alt="" loading="lazy"><div class="promo-in"><img src="assets/star.svg" alt=""><b>Your holiday<br>party just got</b><em>more rewarding.</em></div></button>
+      <button class="pcard" data-event="Corporate"><img src="assets/corporate.jpg" alt="" loading="lazy" style="object-position:67% 50%"><div class="pc-idle">Corporate</div><div class="pc-hov"><div class="eb">corporate</div><h3><em>Make the meal</em><br>the best part of the week.</h3><p>Client dinners, team offsites, sales meetings, lunch &amp; learns. Bring everyone together for a meal.</p></div></button>
+      <button class="pcard" data-event="Celebrations"><img src="assets/celebrations.jpg" alt="" loading="lazy" style="object-position:51% 50%"><div class="pc-idle">Celebrations</div><div class="pc-hov"><div class="eb">celebrations</div><h3><em>Your big night,</em><br>our full attention.</h3><p>Birthdays, anniversaries, graduations and bachelor(ette) parties. Whatever you’re toasting, we’re in.</p></div></button>
+      <button class="pcard" data-event="Weddings"><img src="assets/weddings.jpg" alt="" loading="lazy" style="object-position:50% 50%"><div class="pc-idle">Weddings</div><div class="pc-hov"><div class="eb">weddings</div><h3><em>From first toast</em><br>to last bite.</h3><p>Rehearsal dinners, wedding luncheons, receptions and milestone events. Tell us the date, we’ll handle the details</p></div></button>
     </div>
     <button class="arrow prev" id="pPrev" aria-label="Previous"></button>
     <button class="arrow next" id="pNext" aria-label="Next"></button>
   </div>
   <div class="plan-dots"><div class="dots" id="pDots"></div></div>
-</section>
-
-<!-- ============ WHY FOGO ============ -->
-<section class="why">
-  <div class="intro"><h2>Why Fogo<br><em>for groups</em></h2><p>Everything a planner needs, handled by one person.</p></div>
-  <div class="reasons">
-    <div class="reason"><h3>No room rental.<br>A/V included.</h3><p>Private rooms with no rental fee and complimentary A/V, ready when you walk in.</p></div>
-    <div class="reason"><h3>Flexible by design</h3><p>Curated menus, off-peak scheduling and plated first courses. We work outside the box.</p></div>
-    <div class="reason"><h3>Packages, your way</h3><p>Start with a package, then make it yours. Tell us the vibe. Deixa Comigo.</p></div>
-    <div class="reason"><h3>Inclusive menus</h3><p>Vegetarian, vegan and pescatarian options. Everyone gets the full Market Table.</p></div>
-  </div>
+  <div class="plan-cta"><p>Hosting your own event?</p><a class="btn btn-line" href="#" data-toast="Catering (demo)">book catering</a></div>
 </section>
 
 <!-- ============ EVERYONE EATS WELL ============ -->
@@ -230,42 +242,24 @@
   <h2>Everyone <em>eats well</em></h2>
   <p>You choose Fogo. Your guests choose their experience: beef, chicken, fish or plant-based, with the full Market Table for everyone. Full menus on each location page.</p>
   <div class="chips" id="chips">
-    <button class="chip" aria-pressed="false" data-note="Market Table, seasonal vegetables and plant-forward sides — plus cheese bread and fried bananas."><img src="assets/veg.svg" alt="">Vegetarian</button>
-    <button class="chip" aria-pressed="false" data-note="Dedicated vegan entrées plus a fully plant-based Market Table selection."><img src="assets/vegan.svg" alt="">Vegan</button>
-    <button class="chip" aria-pressed="false" data-note="Fish and seafood options alongside the Market Table."><img src="assets/pesc.svg" alt="">Pescatarian</button>
     <button class="chip" aria-pressed="false" data-note="Most churrasco cuts and Market Table items are naturally gluten-free. Ask your server."><img src="assets/gf.svg" alt="">Gluten-free</button>
+    <button class="chip" aria-pressed="false" data-note="Plant-forward entrées and a fully plant-based Market Table selection."><img src="assets/plant.svg" alt="">Plant-Based</button>
+    <button class="chip" aria-pressed="false" data-note="Dedicated vegan entrées plus a fully plant-based Market Table selection."><img src="assets/vegan.svg" alt="">Vegan</button>
+    <button class="chip" aria-pressed="false" data-note="Fire-roasted cuts and fresh Market Table items that fit low-carb and keto plans."><img src="assets/keto.svg" alt="">Low Carb &amp; Keto</button>
+    <button class="chip" aria-pressed="false" data-note="Fire-roasted meats, seafood and fresh vegetables that fit a paleo plan."><img src="assets/paleo.svg" alt="">Paleo</button>
+    <button class="chip" aria-pressed="false" data-note="Fish and seafood options alongside the Market Table."><img src="assets/pesc.svg" alt="">Pescatarian</button>
   </div>
   <p class="chip-note" id="chipNote" aria-live="polite"></p>
   <button class="btn btn-alt" data-toast="Menus page (demo)">explore all menus</button>
 </section>
 
-<!-- ============ NATIONAL ACCOUNTS ============ -->
-<section class="nat">
-  <div class="im"><img src="assets/private-dining.jpg" alt="Fogo private dining room" loading="lazy"></div>
-  <div>
-    <h2>one program.<em>Restaurants nationwide.</em></h2>
-    <p>Our National Accounts Program is designed for meeting planners and tour and travel partners, with incentive pricing and event packages in major markets across the country.</p>
-    <div class="row">
-      <button class="btn btn-secondary" data-modal="inquiry">Start an inquiry</button>
-      <a class="mail" href="mailto:nationalaccounts@fogo.com"><img src="assets/union.svg" alt="" width="15" height="12">nationalaccounts@fogo.com</a>
-    </div>
-  </div>
-</section>
-
 <!-- ============ TESTIMONIALS ============ -->
 <section class="testi" aria-roledescription="carousel" aria-label="Guest testimonials">
-  <img class="qi" src="assets/quote.svg" alt="">
   <div class="slides" id="slides" aria-live="polite"></div>
   <div class="car-ctl">
     <button class="car-btn p" id="tPrev" aria-label="Previous testimonial"></button>
     <div class="dots" id="dots"></div>
     <button class="car-btn n" id="tNext" aria-label="Next testimonial"></button>
-  </div>
-  <div class="logos">
-    <img src="assets/logo-452.png" alt="" loading="lazy" style="width:120.5px"><img src="assets/logo-453.png" alt="" loading="lazy" style="width:120.5px">
-    <img src="assets/logo-454.png" alt="" loading="lazy" style="width:62.7px"><img src="assets/logo-455.png" alt="" loading="lazy" style="width:120.5px">
-    <img src="assets/logo-456.png" alt="" loading="lazy" style="width:63.3px"><img src="assets/logo-457.png" alt="" loading="lazy" style="width:63.4px;mix-blend-mode:multiply">
-    <img src="assets/logo-458.png" alt="" loading="lazy" style="width:120px"><img src="assets/logo-459.png" alt="" loading="lazy" style="width:120px"><img src="assets/logo-460.png" alt="" loading="lazy" style="width:120px">
   </div>
 </section>
 
@@ -273,18 +267,34 @@
 <section class="evt">
   <div class="l">
     <div class="eb">Plan your event</div>
-    <h2>Your next big dinner<br><em>Starts here.</em></h2>
+    <h2>Your next big dinner<br><em>starts here</em></h2>
     <div class="steps">
-      <div class="step"><b>01</b><div><h3>Tell us about your event</h3><p>Share your date, headcount and event type.</p></div></div>
-      <div class="step"><b>02</b><div><h3>Your Sales Manager builds the plan</h3><p>Room, package and menu, shaped around your group.</p></div></div>
-      <div class="step"><b>03</b><div><h3>Show up. We've got you.</h3><p>Deixa Comigo, from the first drink to the last toast.</p></div></div>
+      <div class="step"><b>01—</b><div><h3>Tell us about your event</h3><p>Share your date, headcount and event type.</p></div></div>
+      <div class="step"><b>02—</b><div><h3>Your Sales Manager builds the plan</h3><p>Room, package and menu, shaped around your group.</p></div></div>
+      <div class="step"><b>03—</b><div><h3>Show up. We've got you.</h3><p>Deixa Comigo, from the first drink to the last toast.</p></div></div>
     </div>
-    <button class="btn btn-alt" data-modal="locations">find your location</button>
-    <a class="btn btn-outline" href="mailto:groupevents@fogo.com">Email groupevents@fogo.com</a>
-    <p class="small">Party of 14 or fewer? <a href="#" data-toast="Reservations (demo)">Reserve a table</a> &nbsp;·&nbsp; Planning for the office? <a href="#" data-toast="Catering (demo)">Order catering</a></p>
+    <div class="btns">
+      <button class="btn btn-alt" data-modal="locations">find a location</button>
+      <a class="btn btn-ghost" href="mailto:groupevents@fogo.com">contact us</a>
+    </div>
+    <p class="small">Party of 14 or fewer? <a href="#" data-toast="Reservations (demo)">Reserve a table</a><br>Planning for the office? <a href="#" data-toast="Catering (demo)">Order catering</a></p>
   </div>
   <div class="r"><img src="assets/dining-room2.jpg" alt="Elegant Fogo dining room" loading="lazy"></div>
 </section>
+
+<!-- ============ NATIONAL ACCOUNTS ============ -->
+<section class="nat-sec"><div class="nat">
+  <div class="im"><img src="assets/picanha.jpg" alt="Picanha board" loading="lazy"></div>
+  <div class="cp"><div class="eb">One Program</div><h2>Restaurants <em>nationwide.</em></h2></div>
+  <div class="dv"></div>
+  <div class="rt">
+    <p>Our National Accounts Program is designed for meeting planners and tour and travel partners, with incentive pricing and event packages in major markets across the country.</p>
+    <div class="row">
+      <button class="btn btn-secondary" data-modal="inquiry">start an inquiry</button>
+      <a class="mail" href="mailto:nationalaccounts@fogo.com"><img src="assets/union.svg" alt="" width="15" height="12">nationalaccounts@fogo.com</a>
+    </div>
+  </div>
+</div></section>
 </main>
 
 <!-- ============ FOOTER ============ -->
@@ -345,7 +355,6 @@ document.addEventListener('click',e=>{
   const m=e.target.closest('[data-modal]'); if(m){e.preventDefault();openModal(m.dataset.modal)}
 });
 
-$('#useLoc').onclick=()=>{toast('Finding your location…');setTimeout(()=>openLocations({prefill:'San Jose',nearest:true}),700)};
 
 /* ---------- other modals ---------- */
 function openModal(kind){
@@ -392,7 +401,7 @@ chips.forEach(c=>c.onclick=()=>{const on=c.getAttribute('aria-pressed')!=='true'
 
 /* ---------- testimonial carousel ---------- */
 const TS=[
- ['“We had such an amazing experience at Fogo de Chão! The food was absolutely delicious, and the service made the experience even better.”','Jenell Crews','Glen Allen, VA'],
+ ['“We had such an amazing experience at Fogo de Chão! The food was absolutely delicious, and the service made the experience even better.”','Jenell Crews','Boys and Girls Club'],
  ['“Our team dinner ran flawlessly. The private room, the A/V and the gauchos kept everyone engaged all night.”','Marcus Hale','San Jose, CA'],
  ['“Stefani made planning our rehearsal dinner effortless. Every guest, including our vegetarians, left happy.”','Priya Natarajan','Santa Clara, CA'],
  ['“The perfect spot to celebrate a milestone. The cuts were exceptional and the room felt truly ours.”','Daniel Ortiz','Oakland, CA'],
