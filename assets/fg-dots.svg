@@ -1,0 +1,9 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="82" height="10" viewBox="0 0 82 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="_Pagination_bullet item">
+<circle id="dot-page" cx="5" cy="5" r="5" fill="#C6AA76"/>
+<circle id="dot-page_2" cx="23" cy="5" r="5" fill="#DFD7C9" fill-opacity="0.5"/>
+<circle id="dot-page_3" cx="41" cy="5" r="5" fill="#DFD7C9" fill-opacity="0.5"/>
+<circle id="dot-page_4" cx="59" cy="5" r="5" fill="#DFD7C9" fill-opacity="0.5"/>
+<circle id="dot-page_5" cx="77" cy="5" r="5" fill="#DFD7C9" fill-opacity="0.5"/>
+</g>
+</svg>
